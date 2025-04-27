@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="stories, short stories, best stories, inspirational stories, storytelling, read stories online, movie summaries, movie reviews, film summaries, latest movies, movie blog, film analysis">
+    <meta name="description" content="TheNoteBlogs - Stories, Movies, and more. Read, explore, and enjoy quality content.">
+    <title>{{ title or 'TheNoteBlogs' }}</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <!-- Google Adsense Placeholder -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <style>
+      .banner {
+        background: #112244;
+        color: #fff;
+        padding: 2rem 0 1rem 0;
+        margin-bottom: 2rem;
+      }
+      .top-nav {
+        background: #112244 !important;
+        color: #fff;
+        padding: 1rem 2rem;
+        display: flex;
+        gap: 2rem;
+      }
+      .top-nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .top-nav a:hover {
+        color: #ffc107;
+      }
+      footer {
+        background: #112244;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 3rem;
+      }
+    </style>
+</head>
+<body class="bg-light">
+    <header>
+        <nav class="top-nav navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="/">TheNoteBlogs</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/terms">Terms of Use</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mb-4">
+        <hr class="my-0">
+    </div>
+    {% if carousel %}
+    <div class="container mb-4">
+        <hr class="my-0">
+    </div>
+    <div class="container">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-dark carousel-fade rounded-4" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='images/stories.jpg') }}" class="d-block w-100 rounded-4" alt="Stories">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Stories</h5>
+                        <p>Read and explore quality stories, from inspirational to entertaining.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/movies.jpg') }}" class="d-block w-100 rounded-4" alt="Movies">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Movies</h5>
+                        <p>Get summaries and reviews of the latest movies. From action to romance, we've got you covered.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon text-white" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon text-white" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    {% endif %}
+    <div class="container mb-4">
+        <hr class="my-0">
+    </div>
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 TheNoteBlogs. All rights reserved.</p>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
