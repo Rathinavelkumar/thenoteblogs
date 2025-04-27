@@ -104,6 +104,16 @@ body {
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
+    min-height: 65vh;
+}
+.story-reading-pane img:first-child {
+    width: 100%;
+    max-width: 900px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 1.5rem;
 }
 
 @media (min-width: 992px) {
