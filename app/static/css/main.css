@@ -108,12 +108,18 @@ body {
 }
 .story-reading-pane img:first-child {
     width: 100%;
-    max-width: 900px;
-    height: 350px;
+    max-width: 1800px;
+    height: 700px;
     object-fit: cover;
     border-radius: 12px;
     display: block;
     margin-bottom: 1.5rem;
+}
+.story-reading-pane img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em 0;
 }
 
 @media (min-width: 992px) {
