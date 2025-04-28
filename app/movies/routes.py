@@ -12,7 +12,7 @@ def movies_index():
     if files:
         first_slug = files[0][:-3]
         return redirect(url_for('movies.movie_detail', movie_slug=first_slug))
-    return render_template('movies/index.html', files=files, title='Movies', carousel=False)
+    return render_template('shared_index.html', files=files, title='Movies', section='movies', carousel=False)
 
 @movies.route('/<movie_slug>')
 def movie_detail(movie_slug):
@@ -26,10 +26,12 @@ def movie_detail(movie_slug):
     except FileNotFoundError:
         abort(404)
     return render_template(
-        'movies/detail.html',
+        'shared_detail.html',
         content=content,
         title=movie_slug.replace('-', ' ').title(),
         files=files,
         active_slug=movie_slug,
+        section='movies',
+        section_title='Movies',
         carousel=False
     )

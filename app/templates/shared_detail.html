@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="d-flex flex-row" style="min-height: 70vh;">
+    <div id="section-nav-panel" class="bg-light border-end pe-0" style="width: 220px; min-width: 140px; max-width: 320px; transition: width 0.2s; overflow-x: hidden;">
+        <div class="d-flex flex-row align-items-center justify-content-between ps-3 pt-2 pb-2 bg-white border-bottom" style="cursor: ew-resize;" id="dragger-shared">
+            <span class="fw-bold">{{ section_title }}</span>
+            <button id="hide-nav-btn-shared" class="btn btn-sm btn-outline-secondary ms-2" title="Hide list">&laquo;</button>
+        </div>
+        <nav class="nav flex-column nav-pills p-2">
+            {% for file in files %}
+                <a class="nav-link {% if active_slug == file[:-3] %}active{% endif %}" href="/{{ section }}/{{ file[:-3] }}">{{ file[:-3].replace('-', ' ').title() }}</a>
+            {% endfor %}
+        </nav>
+    </div>
+    <div id="section-content-panel" class="flex-grow-1 p-4 d-flex flex-column" style="min-width:0;">
+        <article class="{{ section }}-reading-pane card shadow-sm p-4 mb-4 bg-white flex-grow-1 w-100 mx-auto" style="max-width: 900px;">
+            {{ content|safe }}
+            <div class="d-flex justify-content-between mt-4">
+                {% set idx = files.index(active_slug + '.md') %}
+                {% if idx > 0 %}
+                    <a href="/{{ section }}/{{ files[idx-1][:-3] }}" class="btn btn-outline-primary">&laquo; Previous</a>
+                {% else %}
+                    <span></span>
+                {% endif %}
+                {% if idx < files|length - 1 %}
+                    <a href="/{{ section }}/{{ files[idx+1][:-3] }}" class="btn btn-outline-primary">Next &raquo;</a>
+                {% else %}
+                    <span></span>
+                {% endif %}
+            </div>
+        </article>
+        <div class="ad-placeholder mb-2 mx-auto w-100" style="max-width: 900px; min-height: 90px;">
+            <!-- Ad Space -->
+            Ad Space
+        </div>
+    </div>
+</div>
+<script>
+// Dragger and hide/unhide logic (shared)
+const navPanel = document.getElementById('section-nav-panel');
+const hideBtn = document.getElementById('hide-nav-btn-shared');
+const dragger = document.getElementById('dragger-shared');
+let isDragging = false;
+let startX, startWidth;
+
+dragger.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    startX = e.clientX;
+    startWidth = navPanel.offsetWidth;
+    document.body.style.userSelect = 'none';
+});
+document.addEventListener('mousemove', function(e) {
+    if (!isDragging) return;
+    let newWidth = startWidth + (e.clientX - startX);
+    if (newWidth > 320) newWidth = 320;
+    if (newWidth < 60) newWidth = 60;
+    navPanel.style.width = newWidth + 'px';
+});
+document.addEventListener('mouseup', function() {
+    isDragging = false;
+    document.body.style.userSelect = '';
+});
+hideBtn.addEventListener('click', function() {
+    navPanel.style.width = '0px';
+    navPanel.style.minWidth = '0px';
+    navPanel.style.overflow = 'hidden';
+    setTimeout(() => {
+        navPanel.style.display = 'none';
+        document.getElementById('section-content-panel').classList.add('w-100');
+        // Show unhide button
+        if (!document.getElementById('unhide-nav-btn-shared')) {
+            const btn = document.createElement('button');
+            btn.id = 'unhide-nav-btn-shared';
+            btn.className = 'btn btn-sm btn-secondary position-absolute';
+            btn.style.top = '15px';
+            btn.style.left = '0px';
+            btn.innerHTML = '&raquo;';
+            btn.title = 'Show list';
+            btn.onclick = function() {
+                navPanel.style.display = '';
+                navPanel.style.width = '220px';
+                navPanel.style.minWidth = '140px';
+                navPanel.style.overflow = '';
+                document.getElementById('section-content-panel').classList.remove('w-100');
+                btn.remove();
+            };
+            document.getElementById('section-content-panel').appendChild(btn);
+        }
+    }, 200);
+});
+</script>
+{% endblock %}

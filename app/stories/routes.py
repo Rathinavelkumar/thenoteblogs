@@ -12,7 +12,7 @@ def stories_index():
     if files:
         first_slug = files[0][:-3]
         return redirect(url_for('stories.story_detail', story_slug=first_slug))
-    return render_template('stories/index.html', files=files, title='Stories', carousel=False)
+    return render_template('shared_index.html', files=files, title='Stories', section='stories', carousel=False)
 
 @stories.route('/<story_slug>')
 def story_detail(story_slug):
@@ -26,10 +26,12 @@ def story_detail(story_slug):
     except FileNotFoundError:
         abort(404)
     return render_template(
-        'stories/detail.html',
+        'shared_detail.html',
         content=content,
         title=story_slug.replace('-', ' ').title(),
         files=files,
         active_slug=story_slug,
+        section='stories',
+        section_title='Stories',
         carousel=False
     )

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="mb-4">
+    <nav class="nav nav-pills justify-content-center">
+        {% for file in files %}
+            <a class="nav-link text-dark bg-light border me-2 mb-2" href="/{{ section }}/{{ file[:-3] }}">{{ file[:-3].replace('-', ' ').title() }}</a>
+        {% endfor %}
+    </nav>
+</div>
+<div class="ad-placeholder">Ad Space</div>
+{% endblock %}
