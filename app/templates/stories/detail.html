@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="d-flex flex-row" style="min-height: 70vh;">
-    <div id="story-nav-panel" class="bg-light border-end pe-0" style="width: 220px; min-width: 140px; max-width: 320px; transition: width 0.2s; overflow-x: hidden;">
-        <div class="d-flex flex-row align-items-center justify-content-between ps-3 pt-2 pb-2 bg-white border-bottom" style="cursor: ew-resize;" id="dragger">
+<div class="d-flex flex-row min-vh-70">
+    <div id="story-nav-panel" class="bg-light border-end pe-0 nav-panel">
+        <div class="d-flex flex-row align-items-center justify-content-between ps-3 pt-2 pb-2 bg-white border-bottom dragger" id="dragger">
             <span class="fw-bold">Stories</span>
             <button id="hide-nav-btn" class="btn btn-sm btn-outline-secondary ms-2" title="Hide list">&laquo;</button>
         </div>
@@ -12,8 +12,8 @@
             {% endfor %}
         </nav>
     </div>
-    <div id="story-content-panel" class="flex-grow-1 p-4 d-flex flex-column" style="min-width:0;">
-        <article class="story-content story-reading-pane card shadow-sm p-4 mb-4 bg-white flex-grow-1 w-100 mx-auto" style="max-width: 900px;">
+    <div id="story-content-panel" class="flex-grow-1 p-4 d-flex flex-column min-w-0">
+        <article class="story-content story-reading-pane card shadow-sm p-4 mb-4 bg-white flex-grow-1 w-100 mx-auto max-w-900">
             {{ content|safe }}
             <div class="d-flex justify-content-between mt-4">
                 {% set idx = files.index(active_slug + '.md') %}
@@ -29,7 +29,7 @@
                 {% endif %}
             </div>
         </article>
-        <div class="ad-placeholder mb-2 mx-auto w-100" style="max-width: 900px; min-height: 90px;">
+        <div class="ad-placeholder mb-2 mx-auto w-100 max-w-900 min-h-90">
             <!-- Ad Space -->
             Ad Space
         </div>
