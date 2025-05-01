@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="d-flex flex-row min-vh-70">
-    <div id="story-nav-panel" class="bg-light border-end pe-0 nav-panel">
+    <div id="story-nav-panel" class="bg-light border-end nav-panel d-flex flex-column" style="width:220px; min-width:140px; height:80vh;">
         <div class="d-flex flex-row align-items-center justify-content-between ps-3 pt-2 pb-2 bg-white border-bottom dragger" id="dragger">
             <span class="fw-bold">Stories</span>
             <button id="hide-nav-btn" class="btn btn-sm btn-outline-secondary ms-2" title="Hide list">&laquo;</button>
         </div>
-        <nav class="nav flex-column nav-pills p-2">
+        <nav class="nav flex-column nav-pills p-2 flex-grow-1 story-nav-list-scroll">
             {% for file in files %}
                 <a class="nav-link {% if active_slug == file[:-3] %}active{% endif %}" href="/stories/{{ file[:-3] }}">{{ file[:-3].replace('-', ' ').title() }}</a>
             {% endfor %}
