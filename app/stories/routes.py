@@ -1,11 +1,17 @@
 import os
 from flask import render_template, abort, current_app, redirect, url_for
 from . import stories
-from markdown import markdown
 from app.utils_markdown import render_aligned_markdown
+
+"""
+Story routes for TheNoteBlogs
+"""
 
 @stories.route('/')
 def stories_index():
+    """
+    Redirects to the first story detail page or renders the story index.
+    """
     content_dir = os.path.join(current_app.root_path, '..', 'content', 'stories')
     files = [f for f in os.listdir(content_dir) if f.endswith('.md')]
     files = sorted(files)
@@ -17,6 +23,9 @@ def stories_index():
 
 @stories.route('/<story_slug>')
 def story_detail(story_slug):
+    """
+    Renders the detail page for a specific story.
+    """
     content_dir = os.path.join(current_app.root_path, '..', 'content', 'stories')
     files = [f for f in os.listdir(content_dir) if f.endswith('.md')]
     files = sorted(files)

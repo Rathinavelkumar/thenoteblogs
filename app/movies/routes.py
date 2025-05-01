@@ -1,11 +1,15 @@
 import os
 from flask import render_template, abort, current_app, redirect, url_for
 from . import movies
-from markdown import markdown
 from app.utils_markdown import render_aligned_markdown
+
+"""
+Movie routes for TheNoteBlogs
+"""
 
 @movies.route('/')
 def movies_index():
+    """Redirects to the first movie detail page or renders the movie index."""
     content_dir = os.path.join(current_app.root_path, '..', 'content', 'movies')
     files = [f for f in os.listdir(content_dir) if f.endswith('.md')]
     files = sorted(files)
@@ -17,6 +21,7 @@ def movies_index():
 
 @movies.route('/<movie_slug>')
 def movie_detail(movie_slug):
+    """Renders the detail page for a specific movie."""
     content_dir = os.path.join(current_app.root_path, '..', 'content', 'movies')
     files = [f for f in os.listdir(content_dir) if f.endswith('.md')]
     files = sorted(files)
