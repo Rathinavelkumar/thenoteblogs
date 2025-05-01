@@ -85,7 +85,7 @@ body {
 /* Carousel custom styles */
 .carousel-caption h5,
 .carousel-caption p {
-    color: #fff !important;
+    color: var(--caption-color, #fff);
     text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 .carousel-control-prev-icon,

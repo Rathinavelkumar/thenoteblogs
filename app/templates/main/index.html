@@ -6,7 +6,13 @@
             <div class="col-12 col-md-6">
                 <div class="card shadow-lg h-100 display-card">
                     <a href="/stories" class="text-decoration-none text-dark">
-                        <img src="{{ url_for('static', filename='images/stories.jpg') }}" alt="Stories" class="card-img-top rounded-top" style="height: 260px; object-fit: cover;">
+                        <img src="{{ url_for('static', filename='images/stories.jpg') }}" 
+                             alt="Stories" 
+                             loading="lazy" 
+                             width="800" 
+                             height="450" 
+                             class="card-img-top rounded-top" 
+                             style="object-fit: cover;">
                         <div class="card-body">
                             <h2 class="card-title h3">Stories</h2>
                             <p class="card-text">Inspirational stories and more.</p>
@@ -17,7 +23,13 @@
             <div class="col-12 col-md-6">
                 <div class="card shadow-lg h-100 display-card">
                     <a href="/movies" class="text-decoration-none text-dark">
-                        <img src="{{ url_for('static', filename='images/movies.jpg') }}" alt="Movies" class="card-img-top rounded-top" style="height: 260px; object-fit: cover;">
+                        <img src="{{ url_for('static', filename='images/movies.jpg') }}" 
+                             alt="Movies" 
+                             loading="lazy" 
+                             width="800" 
+                             height="450" 
+                             class="card-img-top rounded-top" 
+                             style="object-fit: cover;">
                         <div class="card-body">
                             <h2 class="card-title h3">Movies</h2>
                             <p class="card-text">Movie summaries and reviews.</p>
