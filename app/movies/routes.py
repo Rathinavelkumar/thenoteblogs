@@ -2,6 +2,7 @@ import os
 from flask import render_template, abort, current_app, redirect, url_for
 from . import movies
 from markdown import markdown
+from app.utils_markdown import render_aligned_markdown
 
 @movies.route('/')
 def movies_index():
@@ -22,7 +23,7 @@ def movie_detail(movie_slug):
     md_path = os.path.join(content_dir, f'{movie_slug}.md')
     try:
         with open(md_path, encoding='utf-8') as f:
-            content = markdown(f.read())
+            content = render_aligned_markdown(f.read())
     except FileNotFoundError:
         abort(404)
     return render_template(
