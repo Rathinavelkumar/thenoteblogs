@@ -4,6 +4,8 @@ Deep in the heart of the evergreen forest lived Nia, a squirrel with a reputatio
 
 One morning, as the sun painted the forest in golden hues, Nia stumbled upon an unusual object buried under leaves—it was a golden acorn that glimmered in the sunlight. She had never seen anything like it before. Intrigued, Nia decided to find out its origin. She asked the wise old owl, who told her the acorn was enchanted and held the power to grant one wish to whoever found it.
 
+![A squirrel named Nia](/static/images/Stories/the-adventures-of-nia-the-brave-squirrel.jpg)
+
 But the owl warned her: the acorn’s magic would only work if the wish came from a pure heart, not greed. Nia spent days pondering her wish. Should she wish for unlimited food? A bigger home? A crown to rule the forest? None of those felt right to her.
 
 Then, one evening, Nia overheard the rabbits discussing a looming problem—a strange fog was spreading through the forest and making it hard for the animals to find their way or their food. The forest was in trouble, and Nia knew her wish had to help.

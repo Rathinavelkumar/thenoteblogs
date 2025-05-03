@@ -1,5 +1,3 @@
-![A gentle fox with a sparkling blue scarf helps a lost hedgehog find its way home under a starry forest sky, fairy tale style, soft lighting, magical atmosphere](/static/images/Stories/the-fox-and-the-lost-hedgehog.png)
-
 # The Fox and the Lost Hedgehog
 
 Once upon a time, in a quiet forest where the trees whispered secrets and fireflies danced at dusk, lived a clever fox named **Felix**. Felix was known for his sparkling blue scarf and his kind heart. One chilly evening, as Felix strolled along the moonlit path, he heard soft sobs coming from a patch of tall grass.
