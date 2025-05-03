@@ -2,7 +2,7 @@
 Main site routes for TheNoteBlogs
 """
 
-from flask import render_template, send_from_directory, current_app
+from flask import Blueprint, render_template, send_from_directory, current_app
 import os
 from . import main
 
