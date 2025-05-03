@@ -46,6 +46,9 @@ thenoteblogs/
    ```bash
    gunicorn -w 4 wsgi:app
    ```
+   ```bash
+   gunicorn -w 4 --bind 0.0.0.0:8000 wsgi:app
+   ```
 
 ## Content Management
 - Add/edit Markdown files in `content/stories/` and `content/movies/`.
