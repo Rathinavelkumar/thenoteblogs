@@ -2,8 +2,11 @@
 Main site routes for TheNoteBlogs
 """
 
-from flask import render_template
+from flask import render_template, send_from_directory, current_app
+import os
 from . import main
+
+main = Blueprint('main', __name__)
 
 @main.route('/')
 def index():
@@ -24,3 +27,7 @@ def terms():
 def privacy():
     """Renders the Privacy Policy page."""
     return render_template('main/privacy.html', title='Privacy Policy', contact_email='random@gmail.com', carousel=False)
+
+@main.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory(os.path.join(current_app.root_path, '..'), 'sitemap.xml', mimetype='application/xml')

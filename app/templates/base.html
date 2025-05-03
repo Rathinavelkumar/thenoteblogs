@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="stories, short stories, best stories, inspirational stories, storytelling, read stories online, movie summaries, movie reviews, film summaries, latest movies, movie blog, film analysis">
-    <meta name="description" content="TheNoteBlogs: Curated collection of 500+ original short stories and detailed movie summaries. Daily updated content with 2000+ reader interactions monthly. Explore themes from romance to thriller across multiple genres">
+    <meta name="keywords" content="short stories, best stories, inspirational stories, read stories online, movie summaries, movie reviews, film analysis, story blog, curated stories, romance stories, thriller stories, latest movies, film blog">
+    <meta name="description" content="Discover 500+ original short stories and detailed movie summaries across genres like romance, thriller, and more. TheNoteBlogs offers daily updated content, inspirational stories, and the latest movie reviews for passionate readers and film lovers.">
+    <meta property="og:title" content="TheNoteBlogs | Best Short Stories &amp; Movie Summaries Online">
+    <meta property="og:description" content="Discover 500+ original short stories and detailed movie summaries across genres like romance, thriller, and more. Daily updated content for readers and film lovers.">
     <meta property="og:image" content="{{ url_for('static', filename='images/og-banner.jpg') }}">
-    <meta name="author" content="TheNoteBlogs Editorial Team">
+    <meta property="og:url" content="https://thenoteblogs.rathnaschools.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TheNoteBlogs | Best Short Stories &amp; Movie Summaries Online">
+    <meta name="twitter:description" content="Discover 500+ original short stories and detailed movie summaries across genres like romance, thriller, and more. Daily updated content for readers and film lovers.">
+    <meta name="twitter:image" content="{{ url_for('static', filename='images/og-banner.jpg') }}">
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="kBkrzYZ6oR3-zswoZ35xwXuVdFl6tD-QTrUkuUtx8Hc" />
     <script type="application/ld+json">
@@ -14,15 +21,15 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "TheNoteBlogs",
-      "url": "https://thenoteblogs.com",
+      "url": "https://thenoteblogs.rathnaschools.com",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://thenoteblogs.com/search?q={search_term}",
+        "target": "https://thenoteblogs.rathnaschools.com/search?q={search_term}",
         "query-input": "required name=search_term"
       }
     }
     </script>
-    <title>{{ title or 'TheNoteBlogs' }}</title>
+    <title>TheNoteBlogs | Best Short Stories &amp; Movie Summaries Online</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
