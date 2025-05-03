@@ -1,8 +1,8 @@
-![A gentle green dragon with sparkling eyes sits atop a hill, watching children play in a distant village, fairy tale style, sunset lighting, peaceful mood](/static/images/Stories/the-lonely-dragon.png)
-
 # The Lonely Dragon
 
 In the shadow of the Misty Mountains lived a gentle dragon named **Dara**. Dara had shimmering green scales and a heart full of dreams, but the villagers feared her and stayed far away.
+
+![A gentle green dragon with sparkling eyes sits atop a hill, watching children play in a distant village, fairy tale style, sunset lighting, peaceful mood](/static/images/Stories/the-lonely-dragon.jpg)
 
 One day, Dara watched from her hilltop as children played in the fields. She longed to join them but worried she would frighten them. Instead, she used her fiery breath to light lanterns for the village every night, hoping to show her kindness.
 

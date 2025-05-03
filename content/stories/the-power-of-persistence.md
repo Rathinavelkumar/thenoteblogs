@@ -1,9 +1,9 @@
 
 # 🌟 The Power of Persistence
 
-![A young boy with a red scarf, smiling as he climbs a towering misty mountain, magical golden birds flying around him, fairy tale style, vibrant colors, inspirational atmosphere](https://example.com/mountain-persistence-boy-1800x700.jpg)
-
 Once upon a time, in a peaceful village surrounded by endless fields and sparkling lakes, there lived a boy named **Ravi**. Every day, he gazed up at the great *Skyreach Mountain*—a towering peak that touched the clouds. Many villagers said it was impossible to climb, but Ravi's heart was filled with hope and determination.
+
+![A young boy with a red scarf, smiling as he climbs a towering misty mountain, magical golden birds flying around him, fairy tale style, vibrant colors, inspirational atmosphere](/static/images/Stories/the-power-of-persistence.jpg)
 
 One bright morning, carrying only a loaf of bread and his grandfather’s *silver compass*, **Ravi** set out to reach the summit. He climbed eagerly at first, but soon heavy winds knocked him down, and slippery rocks made him tumble. Bruised but not broken, Ravi returned to the village. Everyone chuckled and shook their heads, but he simply smiled and said, "Next time, I’ll be stronger."
 

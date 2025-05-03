@@ -2,6 +2,8 @@
 
 Once upon a time, in a quiet forest where the trees whispered secrets and fireflies danced at dusk, lived a clever fox named **Felix**. Felix was known for his sparkling blue scarf and his kind heart. One chilly evening, as Felix strolled along the moonlit path, he heard soft sobs coming from a patch of tall grass.
 
+![A fox named Felix](/static/images/Stories/the-fox-and-the-lost-hedgehog.jpg)
+
 Curious and concerned, Felix followed the sound and found a tiny **hedgehog** named **Hazel**, shivering and lost. Hazel had wandered too far while chasing a glowing beetle and couldn’t find her way home.
 
 Felix knelt down and gently asked, “Why are you crying, little one?” Hazel sniffled, “I’m lost and scared. I want to go home, but I don’t know the way.”
